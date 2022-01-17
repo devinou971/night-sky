@@ -10,7 +10,7 @@ class Swnoflake{
     }
     
     move(angle){
-        if (this.y > window.innerHeight){
+        if (this.y > window.innerHeight + this.radius){
             this.y = -10
             this.x = window.innerWidth * Math.random()
         }
