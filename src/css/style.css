@@ -12,3 +12,31 @@ canvas {
     left : 0px ; 
     top : 0px;
 }
+#param{
+    display: none;
+    position: absolute;
+    left: 10%;
+    top: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+
+/* Burger button */
+#burger {
+    top: 4%;
+    left: 4%;
+    transform: translate(-50%, 50%);
+    position: absolute;
+    width: 50px;
+}
+#burger:before, #burger:after, #burger div {
+    background: #000;
+    content: "";
+    display: block;
+    height: 6px;
+    border-radius: 3px;
+    margin: 7px 0;
+    transition: 0.5s;
+}
