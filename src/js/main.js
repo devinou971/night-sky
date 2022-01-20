@@ -1,3 +1,6 @@
+/**
+ * Sets the canvases dimensions to the screen's dimensions
+ */
 function setup_canvases(){
     for(let o of document.querySelectorAll("canvas")){
         o.style.width = window.innerWidth.toString() + "px"
@@ -6,6 +9,12 @@ function setup_canvases(){
         o.height = window.innerHeight
     }
 }
+
+/**
+ * Displays all the layers of snowflakes in the canvases
+ * @param {Array} listSnowflakes contains an array for every layers of drawable canvases
+ * @param {Number} angle the angle the snow should take when it travels. I use it to simulate wind  
+ */
 function drawAll(listSnowflakes, angle){
     for(let i = 0; i< listSnowflakes.length; i++){
         for(let j=0; j< listSnowflakes[i].length ; j++){
@@ -15,6 +24,9 @@ function drawAll(listSnowflakes, angle){
     }
 }
 
+/**
+ * When the parameters are changed in the UI, this function updates the speed mulitplier for each layers 
+ */
 function updateSpeed(){
     console.log("updating speed")
     speedInputs = document.querySelectorAll(".speedmulti")
@@ -23,6 +35,10 @@ function updateSpeed(){
     }
 }
 
+/**
+ * When the size parameters are changed in the UI, this function updates the base size of snowflakes for each layer
+ * @todo Link this function to the UI
+ */
 function updateSize(){
     numberInputs = document.querySelectorAll(".numsnow")
     for(let i=0; i<numberInputs.length; i++){
@@ -30,8 +46,20 @@ function updateSize(){
     }
 }
 
+/**
+ * Create an array of snowflakes for 1 layer
+ * @param {Number} number It's the number of snowflakes that should be created 
+ * @param {Number} min_speed It's the min speed a snowflake can go to
+ * @param {Number} max_speed It's the max speed a snowflake can go to
+ * @param {Number} min_alpha It's the min alpha(tranparency) a snowflake can have
+ * @param {Number} max_alpha It's the max alpha(tranparency) a snowflake can have
+ * @param {Number} min_radius It's the min radius the circle use to represent a snwoflake can have
+ * @param {Number} max_radius It's the max radius the circle use to represent a snwoflake can have
+ * @param {CanvasRenderingContext2D} ctx It's the canvas the snow should be rendered to. The layer if you will
+ * @returns 
+ */
 function createSnowflakes(number, min_speed, max_speed, min_alpha, max_alpha, min_radius, max_radius, ctx){
-    var arr = Array(number);
+    let arr = Array(number);
     for (let i = 0; i < arr.length; i++) {
         x_position = Math.random() * window.innerWidth
         y_position = Math.random() * window.innerHeight - 10
@@ -73,6 +101,11 @@ window.onload = e=>{
     snowflakes2 = createSnowflakes(number=numberSnow[2], min_speed=1, max_speed=3, min_alpha=0.5, max_alpha=1, min_radius=2, max_radius=4,ctxs[2])
     snowflakes3 = createSnowflakes(number=numberSnow[3], min_speed=1, max_speed=3, min_alpha=0.5, max_alpha=1, min_radius=3, max_radius=5,ctxs[3])
 
+    /**
+     * Displays the parameters if the burger button is clicked
+     * @todo Change the burger button
+     * @param {*} e 
+     */
     burger.onclick = e => {
         let param = document.querySelector("#param")
         if(param.style.display == "none"){
@@ -83,6 +116,10 @@ window.onload = e=>{
         }
     }
 
+    /**
+     * When the mouse moves, the angle is recalculated
+     * When the mouse doesn't move for 3 seconds, we make it disapear along with the burger menu
+     */
     document.addEventListener("mousemove", e=>{
         let body = document.querySelector("body")
         body.style.cursor = "auto"

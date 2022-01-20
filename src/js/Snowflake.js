@@ -1,4 +1,22 @@
+/**
+ * Summary.
+ * 
+ * Description.
+ * 
+ * @file
+ * @author
+ */
 class Swnoflake{
+    /**
+     * 
+     * @class
+     * @param {*} x 
+     * @param {*} y 
+     * @param {*} radius 
+     * @param {*} alpha 
+     * @param {*} speed 
+     * @param {*} ctx 
+     */
     constructor(x, y, radius, alpha, speed, ctx){
         this.x = x
         this.y = y
