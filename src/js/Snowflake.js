@@ -9,7 +9,7 @@ class Swnoflake{
         this.ctx = ctx
     }
     
-    move(angle){
+    move(angle, speedMulti=1){
         if (this.y > window.innerHeight + this.radius){
             this.y = -10
             this.x = window.innerWidth * Math.random()
@@ -23,8 +23,8 @@ class Swnoflake{
             this.x = -10
         }
 
-        this.y += (this.speed * Math.sin(angle)) 
-        this.x += (this.speed * Math.cos(angle))
+        this.y += (this.speed * speedMulti * Math.sin(angle)) 
+        this.x += (this.speed * speedMulti * Math.cos(angle))
     }
 
     draw(){

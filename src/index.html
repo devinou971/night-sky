@@ -27,41 +27,37 @@
     <section id="param">
         <form >
             <div>
-                <label for="speedmulti">Speed Multiplier</label><br>
-                <input type="range" name="speedmulti" id="speedsnow">
+                <label for="numsnow1">Number of snowflake in layer 1</label>
+                <input type="range" class="numsnow" name="numsnow1" id="numsnow1" min="10" value="50" max="200">
             </div>
             <div>
-                <label for="numsnow1">Number of snowflake in layer 1</label><br>
-                <input type="range" name="numsnow1" id="numsnow1" min="10" value="50" max="200">
+                <label for="numsnow2">Number of snowflake in layer 2</label>
+                <input type="range" class="numsnow" name="numsnow2" id="numsnow2" min="10" value="50" max="200">
             </div>
             <div>
-                <label for="numsnow2">Number of snowflake in layer 2</label><br>
-                <input type="range" name="numsnow2" id="numsnow2" min="10" value="50" max="200">
+                <label for="numsnow3">Number of snowflake in layer 3</label>
+                <input type="range" class="numsnow" name="numsnow3" id="numsnow3" min="10" value="50" max="200">
             </div>
             <div>
-                <label for="numsnow3">Number of snowflake in layer 3</label><br>
-                <input type="range" name="numsnow3" id="numsnow3" min="10" value="50" max="200">
+                <label for="numsnow4">Number of snowflake in layer 4</label>
+                <input type="range" class="numsnow" name="numsnow4" id="numsnow4" min="10" value="50" max="200">
             </div>
-            <div>
-                <label for="numsnow4">Number of snowflake in layer 4</label><br>
-                <input type="range" name="numsnow4" id="numsnow4" min="10" value="50" max="200">
-            </div>
-
+            <br>
             <div>
                 <label for="speedsnow1">Speed multiplier for layer 1</label>
-                <input type="range" name="speedsnow1" id="speedsnow1" min="0" value="1" max="3">
+                <input type="range" class="speedmulti" name="speedsnow1" id="speedsnow1" min="0" value="1" max="3" step="0.1" onchange="updateSpeed()">
             </div>
             <div>
                 <label for="speedsnow2">Speed multiplier for layer 2</label>
-                <input type="range" name="speedsnow2" id="speedsnow2" min="0" value="1" max="3">
+                <input type="range" class="speedmulti" name="speedsnow2" id="speedsnow2" min="0" value="1" max="3" step="0.1" onchange="updateSpeed()">
             </div>
             <div>
                 <label for="speedsnow3">Speed multiplier for layer 3</label>
-                <input type="range" name="speedsnow3" id="speedsnow3" min="0" value="1" max="3">
+                <input type="range" class="speedmulti" name="speedsnow3" id="speedsnow3" min="0" value="1" max="3" step="0.1" onchange="updateSpeed()">
             </div>
             <div>
                 <label for="speedsnow4">Speed multiplier for layer 4</label>
-                <input type="range" name="speedsnow4" id="speedsnow4" min="0" value="1" max="3">
+                <input type="range" class="speedmulti" name="speedsnow4" id="speedsnow4" min="0" value="1" max="3" step="0.1" onchange="updateSpeed()">
             </div>
         </form>
     </section>
