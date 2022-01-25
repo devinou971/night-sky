@@ -15,6 +15,6 @@ I use a discord art from the ShadowPC server and separated the scene in 4 differ
 
 ## How to use it ?
 
-You can see the website in the githug page right [here](https://devinou971.github.io/night-sky/) 
+You can see the website in the githug page right [here](https://devinou971.github.io/night-sky/src) 
 You can simply clone the repo and open the index.html in your browser.\
 The images do take a while to load, it's because they are pretty high quality.\
